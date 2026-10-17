@@ -552,3 +552,62 @@ html, body { margin: 0; background: #17365d; }
  #particula-hero .content-section .eyebrow, #particula-hero .problem .eyebrow { margin-bottom: 22px; }
  #particula-hero .component-art { height: 170px; }
 }
+
+/* Partner marks belong to the opening brand scene, outside the section wheel. */
+#particula-hero .brand-opening { width: 100%; text-align: center; }
+#particula-hero .partner-strip { width: min(920px, 90%); margin: clamp(24px, 4svh, 42px) auto 0; }
+#particula-hero .partner-label { margin: 0 0 22px; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+#particula-hero .partner-logos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; gap: 32px; margin: 0; padding: 0; list-style: none; }
+#particula-hero .partner-logos li { display: grid; place-items: center; min-width: 0; height: 88px; }
+#particula-hero .partner-logos img { display: block; width: 100%; max-width: 190px; height: auto; max-height: 82px; object-fit: contain; }
+#particula-hero .partner-logos .partner-foundry { max-width: 152px; }
+#particula-hero .partner-logos .partner-rise { max-width: 90px; }
+
+/* The original deck portraits and roles, in the site's Raleway and navy palette. */
+#particula-hero .team { background: linear-gradient(180deg, #17365d40, #17365d55); }
+#particula-hero .team-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; max-width: 1120px; margin: 0 auto; }
+#particula-hero .team-member { grid-column: span 2; min-width: 0; padding: 32px 22px; border: 1px solid #adc9ec33; border-radius: 26px; background: linear-gradient(135deg, #1c3d62dd, #122c4ded); text-align: center; }
+#particula-hero .team-member:nth-child(4) { grid-column: 2 / span 2; }
+#particula-hero .team-member:nth-child(5) { grid-column: 4 / span 2; }
+#particula-hero .team-portrait { width: 156px; height: 156px; max-width: 100%; margin: 0 auto 28px; overflow: hidden; border-radius: 50%; background: #3e68a0; border: 3px solid #adc9ec66; }
+#particula-hero .team-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+#particula-hero .team-portrait .portrait-riccardo { object-position: 68% 10%; transform: scale(1.65); transform-origin: 68% 24%; }
+#particula-hero .team-portrait .portrait-claudia { object-position: 65% 36%; }
+#particula-hero .team-category { margin: 0 0 16px; color: var(--yellow); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+#particula-hero .team-advisor .team-category { color: #adc9ec; }
+#particula-hero .team-member h3 { margin: 0; color: #fff; font-size: clamp(23px, 2vw, 28px); font-weight: 600; line-height: 1.18; text-wrap: balance; }
+#particula-hero .team-credentials { display: block; margin-top: 8px; font-size: 13px; font-weight: 400; color: #adc9ec; letter-spacing: 0; }
+#particula-hero .team-role { margin: 22px 0 8px; color: #fff; font-size: 17px; font-weight: 500; line-height: 1.35; }
+#particula-hero .team-expertise { margin: 0; color: #d0dff1; font-size: 15px; line-height: 1.6; letter-spacing: -.025em; text-wrap: pretty; }
+@media (min-width: 701px) and (max-width: 1199px) {
+ #particula-hero .team-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+ #particula-hero .team-member:nth-child(4) { grid-column: span 2; }
+ #particula-hero .team-member:nth-child(5) { grid-column: 2 / span 2; }
+}
+@media (max-width: 700px) {
+ #particula-hero .partner-strip { width: min(390px, 92%); margin-top: 28px; }
+ #particula-hero .partner-label { margin-bottom: 14px; font-size: 10px; }
+ #particula-hero .partner-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; padding-inline: 16px; }
+ #particula-hero .partner-logos li { height: 60px; }
+ #particula-hero .partner-logos img { max-width: 144px; max-height: 58px; }
+ #particula-hero .partner-logos .partner-foundry { max-width: 108px; }
+ #particula-hero .partner-logos .partner-rise { max-width: 62px; }
+ #particula-hero .team-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+ #particula-hero .team-member, #particula-hero .team-member:nth-child(4), #particula-hero .team-member:nth-child(5) { grid-column: auto; display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 20px; padding: 24px 20px; text-align: left; align-items: start; }
+ #particula-hero .team-portrait { width: 100px; height: 100px; margin: 0; border-width: 2px; }
+ #particula-hero .team-category { margin-bottom: 10px; font-size: 10px; }
+ #particula-hero .team-member h3 { font-size: 23px; text-wrap: initial; }
+ #particula-hero .team-role { margin-top: 16px; font-size: 16px; }
+ #particula-hero .team-expertise { font-size: 14px; }
+}
+@media (max-width: 380px) {
+ #particula-hero .team-member, #particula-hero .team-member:nth-child(4), #particula-hero .team-member:nth-child(5) { grid-template-columns: 76px minmax(0, 1fr); gap: 16px; padding: 22px 16px; }
+ #particula-hero .team-portrait { width: 76px; height: 76px; }
+ #particula-hero .team-member h3 { font-size: 21px; }
+}
+@media (max-height: 600px) and (min-width: 701px) {
+ #particula-hero .partner-strip { margin-top: 18px; }
+ #particula-hero .partner-label { margin-bottom: 10px; }
+ #particula-hero .partner-logos li { height: 62px; }
+ #particula-hero .partner-logos img { max-height: 60px; }
+}
