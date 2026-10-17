@@ -9,7 +9,7 @@ html, body { margin: 0; background: #17365d; }
 #particula-hero .journey { position: relative; height: 160%; }
 #particula-hero .scene { position: sticky; top: 0; height: 100svh; overflow: hidden; background: transparent; }
 #particula-hero .backdrop { position: sticky; top: 0; height: 100svh; margin-bottom: -100svh; overflow: hidden; z-index: -1; background: #eff2f6; pointer-events: none; }
-#particula-hero .backdrop img { position: absolute; width: 120%; height: 120%; left: -10%; top: -10%; object-fit: cover; object-position: 68% center; transform-origin: 68% 50%; transform: translate3d(var(--bg-x, 0%), var(--bg-y, 0%), 0) rotate(var(--bg-turn, -1.2deg)) scale(var(--bg-zoom, 1.03)); will-change: transform; }
+#particula-hero .backdrop img { position: absolute; width: 120%; height: 120%; left: -10%; top: -10%; object-fit: contain; object-position: 68% center; opacity: .42; transform-origin: 68% 50%; transform: translate3d(var(--bg-x, 0%), var(--bg-y, 0%), 0) rotate(var(--bg-turn, -1.2deg)) scale(var(--bg-zoom, 1.03)); will-change: transform; }
 #particula-hero .tint { position: absolute; inset: 0; background: linear-gradient(100deg, #102743, #17365d); opacity: calc(var(--p) * .86); }
 #particula-hero .topline { position: absolute; top: 32px; left: 4.5%; right: 4.5%; display: flex; justify-content: space-between; gap: 24px; font-size: 14px; font-weight: 600; opacity: calc(1 - var(--p) * 2); }
 #particula-hero .title-wrap { position: absolute; inset: 0; display: grid; place-items: center; transform: translate3d(0, calc(var(--p) * -105svh), 0); }
@@ -518,3 +518,37 @@ html, body { margin: 0; background: #17365d; }
 #particula-hero .use-figure > svg .uc-text, #particula-hero .figure-dialog-art svg .uc-text { font-family: 'Raleway', sans-serif; letter-spacing: 0; }
 #particula-hero .figure-dialog-art svg { min-width: 1100px; }
 @media (max-width: 700px) { #particula-hero .use-figure { padding: 8px 8px 0; } }
+
+/* Laptop layouts reserve less space for navigation and prioritize readable figures. */
+@media (min-width: 1024px) and (max-width: 1599px) {
+ #particula-hero { --content-left: 200px; }
+ #particula-hero .section-wheel { left: 16px; width: 160px; }
+ #particula-hero .wheel-list a { font-size: 16px; }
+}
+@media (min-width: 701px) and (max-width: 1599px) {
+ #particula-hero .content-section, #particula-hero .problem { padding-top: 96px; padding-bottom: 96px; }
+ #particula-hero .section-head { margin-bottom: 40px; }
+ #particula-hero .content-section h2 { font-size: clamp(38px, 4.5vw, 64px); }
+ #particula-hero #solution-title { font-size: clamp(34px, 3.7vw, 56px); }
+ #particula-hero .problem h2 { font-size: clamp(40px, 4.8vw, 68px); }
+ #particula-hero .product h2 { font-size: clamp(72px, 7.5vw, 112px); }
+ #particula-hero .product-definition { max-width: 800px; font-size: clamp(26px, 2.5vw, 36px); }
+ #particula-hero .section-intro { max-width: 780px; margin-inline: auto; font-size: 18px; }
+ #particula-hero .product-edge { grid-template-columns: 72px minmax(0, 1fr); gap: 20px; padding: 24px; min-height: 144px; }
+ #particula-hero .edge-visual { width: 72px; height: 88px; }
+ #particula-hero .product-edge h3 { font-size: clamp(23px, 2vw, 28px); }
+ #particula-hero .pilot-top { flex-wrap: wrap; }
+ #particula-hero .use-explorer { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+ #particula-hero .use-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ #particula-hero .use-tab { min-height: 72px; padding: 14px 16px; font-size: 17px; }
+ #particula-hero .use-panel-copy p { max-width: 80ch; }
+ #particula-hero .contact { padding-top: 110px; padding-bottom: 110px; }
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+ #particula-hero .use-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 701px) and (max-height: 850px) {
+ #particula-hero .content-section, #particula-hero .problem { padding-top: 72px; padding-bottom: 88px; }
+ #particula-hero .content-section .eyebrow, #particula-hero .problem .eyebrow { margin-bottom: 22px; }
+ #particula-hero .component-art { height: 170px; }
+}
